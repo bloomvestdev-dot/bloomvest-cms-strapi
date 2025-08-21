@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_about_uses",
+  "info": {
+    "displayName": "About us"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "card": {
+      "type": "component",
+      "component": "elements.cards",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

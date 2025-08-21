@@ -1,0 +1,63 @@
+{
+  "collectionName": "components_layout_footers",
+  "info": {
+    "displayName": "Footer"
+  },
+  "options": {},
+  "attributes": {
+    "cta": {
+      "type": "component",
+      "component": "layout.cta",
+      "repeatable": false
+    },
+    "logo": {
+      "type": "component",
+      "component": "elements.logo",
+      "repeatable": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "facebook": {
+      "type": "text"
+    },
+    "twitter": {
+      "type": "text"
+    },
+    "linkedin": {
+      "type": "text"
+    },
+    "instagram": {
+      "type": "text"
+    },
+    "rightsText": {
+      "type": "text"
+    },
+    "quickLinks": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    },
+    "services": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    },
+    "contacts": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

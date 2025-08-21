@@ -18,7 +18,10 @@
       "type": "dynamiczone",
       "components": [
         "blocks.hero-section",
-        "blocks.service-section"
+        "blocks.service-section",
+        "blocks.our-story",
+        "blocks.webinar",
+        "layout.footer"
       ]
     }
   }

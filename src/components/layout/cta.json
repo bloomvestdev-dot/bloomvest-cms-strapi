@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_ctas",
+  "info": {
+    "displayName": "Cta"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

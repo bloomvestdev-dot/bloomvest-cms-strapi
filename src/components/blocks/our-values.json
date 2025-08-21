@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_blocks_our_values",
+  "info": {
+    "displayName": "Our Values"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "component": "elements.cards",
+      "repeatable": true
+    },
+    "icons": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

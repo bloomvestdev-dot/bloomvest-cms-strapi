@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_blocks_mission_visions",
+  "info": {
+    "displayName": "Mission Vision"
+  },
+  "options": {},
+  "attributes": {
+    "missionCard": {
+      "type": "component",
+      "component": "elements.cards",
+      "repeatable": false
+    },
+    "visionCard": {
+      "type": "component",
+      "component": "elements.cards",
+      "repeatable": false
+    },
+    "missionBg": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "visionBg": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

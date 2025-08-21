@@ -1,0 +1,61 @@
+{
+  "collectionName": "components_blocks_courses",
+  "info": {
+    "displayName": "Course"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "Book",
+        "Camera"
+      ]
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "relatedCourseCount": {
+      "type": "string"
+    },
+    "featuredCourse": {
+      "type": "boolean",
+      "default": false
+    },
+    "courseType": {
+      "type": "enumeration",
+      "enum": [
+        "Video Course",
+        "Reading Material"
+      ]
+    },
+    "courseValue": {
+      "type": "enumeration",
+      "enum": [
+        "Free",
+        "Paid"
+      ]
+    },
+    "courseDuration": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "enumeration",
+      "enum": [
+        "Beginner",
+        "Intermediate",
+        "Expert",
+        "Legendary"
+      ]
+    },
+    "cta": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

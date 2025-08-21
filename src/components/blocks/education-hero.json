@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_blocks_education_heroes",
+  "info": {
+    "displayName": "Education Hero"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "stats": {
+      "type": "component",
+      "component": "elements.cards",
+      "repeatable": true
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

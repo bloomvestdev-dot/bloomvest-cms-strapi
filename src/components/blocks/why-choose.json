@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blocks_why_chooses",
+  "info": {
+    "displayName": "Why Choose"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "list": {
+      "type": "component",
+      "component": "elements.list",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

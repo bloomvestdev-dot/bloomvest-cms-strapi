@@ -29,7 +29,9 @@
         "layout.footer",
         "blocks.education-hero",
         "blocks.latest-course",
-        "blocks.featured-block"
+        "blocks.featured-block",
+        "blocks.blog-hero",
+        "blocks.latest-article"
       ]
     }
   }

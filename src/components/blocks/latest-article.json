@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blocks_latest_articles",
+  "info": {
+    "displayName": "Latest Article"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

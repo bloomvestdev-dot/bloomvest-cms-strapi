@@ -12,6 +12,36 @@ export interface BlocksAboutUs extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksBlog extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_blogs';
+  info: {
+    displayName: 'Blog';
+  };
+  attributes: {
+    category: Schema.Attribute.String;
+    commentCount: Schema.Attribute.String;
+    date: Schema.Attribute.DateTime;
+    description: Schema.Attribute.RichText;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    likeCount: Schema.Attribute.String;
+    readTime: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksBlogHero extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_blog_heroes';
+  info: {
+    displayName: 'Blog Hero';
+    icon: 'command';
+  };
+  attributes: {
+    categories: Schema.Attribute.Component<'elements.categories', true>;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksCourse extends Struct.ComponentSchema {
   collectionName: 'components_blocks_courses';
   info: {
@@ -74,6 +104,17 @@ export interface BlocksHeroSection extends Struct.ComponentSchema {
     imageTwo: Schema.Attribute.Media<'images'>;
     logos: Schema.Attribute.Component<'elements.logo', true>;
     trustedByTiltle: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksLatestArticle extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_latest_articles';
+  info: {
+    displayName: 'Latest Article';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -171,6 +212,16 @@ export interface ElementsCards extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsCategories extends Struct.ComponentSchema {
+  collectionName: 'components_elements_categories';
+  info: {
+    displayName: 'Categories';
+  };
+  attributes: {
     title: Schema.Attribute.String;
   };
 }
@@ -274,10 +325,13 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'blocks.about-us': BlocksAboutUs;
+      'blocks.blog': BlocksBlog;
+      'blocks.blog-hero': BlocksBlogHero;
       'blocks.course': BlocksCourse;
       'blocks.education-hero': BlocksEducationHero;
       'blocks.featured-block': BlocksFeaturedBlock;
       'blocks.hero-section': BlocksHeroSection;
+      'blocks.latest-article': BlocksLatestArticle;
       'blocks.latest-course': BlocksLatestCourse;
       'blocks.mission-vision': BlocksMissionVision;
       'blocks.our-story': BlocksOurStory;
@@ -286,6 +340,7 @@ declare module '@strapi/strapi' {
       'blocks.webinar': BlocksWebinar;
       'blocks.why-choose': BlocksWhyChoose;
       'elements.cards': ElementsCards;
+      'elements.categories': ElementsCategories;
       'elements.link': ElementsLink;
       'elements.list': ElementsList;
       'elements.live-recording-card': ElementsLiveRecordingCard;

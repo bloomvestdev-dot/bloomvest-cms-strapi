@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_blocks_blogs",
+  "info": {
+    "displayName": "Blog"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "readTime": {
+      "type": "string"
+    },
+    "likeCount": {
+      "type": "string"
+    },
+    "commentCount": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

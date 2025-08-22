@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_blog_heroes",
+  "info": {
+    "displayName": "Blog Hero",
+    "icon": "command"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "categories": {
+      "type": "component",
+      "component": "elements.categories",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

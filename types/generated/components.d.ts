@@ -53,6 +53,17 @@ export interface BlocksBlogHero extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksContactHero extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_contact_heroes';
+  info: {
+    displayName: 'Contact Hero';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksCourse extends Struct.ComponentSchema {
   collectionName: 'components_blocks_courses';
   info: {
@@ -389,6 +400,7 @@ declare module '@strapi/strapi' {
       'blocks.archived-webinars': BlocksArchivedWebinars;
       'blocks.blog': BlocksBlog;
       'blocks.blog-hero': BlocksBlogHero;
+      'blocks.contact-hero': BlocksContactHero;
       'blocks.course': BlocksCourse;
       'blocks.education-hero': BlocksEducationHero;
       'blocks.featured-block': BlocksFeaturedBlock;

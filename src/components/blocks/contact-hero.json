@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blocks_contact_heroes",
+  "info": {
+    "displayName": "Contact Hero"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

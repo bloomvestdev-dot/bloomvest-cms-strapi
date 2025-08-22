@@ -21,7 +21,8 @@
         "blocks.service-section",
         "blocks.our-story",
         "blocks.webinar",
-        "layout.footer"
+        "layout.footer",
+        "blocks.expert-article"
       ]
     }
   }

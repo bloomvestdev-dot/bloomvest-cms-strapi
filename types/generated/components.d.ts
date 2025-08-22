@@ -101,6 +101,33 @@ export interface BlocksEducationHero extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksExpertArticle extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_expert_articles';
+  info: {
+    displayName: 'Expert Article';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'blocks.expert-article-card', true>;
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksExpertArticleCard extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_expert_article_cards';
+  info: {
+    displayName: 'Expert Article Card';
+  };
+  attributes: {
+    color: Schema.Attribute.Enumeration<['Blue', 'Orange', 'Purple']>;
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text;
+    length: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksFeaturedBlock extends Struct.ComponentSchema {
   collectionName: 'components_blocks_featured_blocks';
   info: {
@@ -403,6 +430,8 @@ declare module '@strapi/strapi' {
       'blocks.contact-hero': BlocksContactHero;
       'blocks.course': BlocksCourse;
       'blocks.education-hero': BlocksEducationHero;
+      'blocks.expert-article': BlocksExpertArticle;
+      'blocks.expert-article-card': BlocksExpertArticleCard;
       'blocks.featured-block': BlocksFeaturedBlock;
       'blocks.hero-section': BlocksHeroSection;
       'blocks.latest-article': BlocksLatestArticle;

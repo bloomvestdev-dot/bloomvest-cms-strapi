@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_blocks_expert_article_cards",
+  "info": {
+    "displayName": "Expert Article Card"
+  },
+  "options": {},
+  "attributes": {
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "Blue",
+        "Orange",
+        "Purple"
+      ]
+    },
+    "length": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

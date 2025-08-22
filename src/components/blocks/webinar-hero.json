@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blocks_webinar_heroes",
+  "info": {
+    "displayName": "Webinar Hero"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

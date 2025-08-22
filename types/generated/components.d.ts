@@ -12,6 +12,17 @@ export interface BlocksAboutUs extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksArchivedWebinars extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_archived_webinars';
+  info: {
+    displayName: 'Archived Webinars';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksBlog extends Struct.ComponentSchema {
   collectionName: 'components_blocks_blogs';
   info: {
@@ -180,6 +191,17 @@ export interface BlocksServiceSection extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksUpcomingWebinars extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_upcoming_webinars';
+  info: {
+    displayName: 'Upcoming Webinars';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksWebinar extends Struct.ComponentSchema {
   collectionName: 'components_blocks_webinars';
   info: {
@@ -191,6 +213,35 @@ export interface BlocksWebinar extends Struct.ComponentSchema {
     heading: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
     subtitle: Schema.Attribute.Text;
+  };
+}
+
+export interface BlocksWebinarCard extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_webinar_cards';
+  info: {
+    displayName: 'Webinar Card';
+  };
+  attributes: {
+    badge: Schema.Attribute.String;
+    cta: Schema.Attribute.Component<'layout.cta', false>;
+    date: Schema.Attribute.DateTime;
+    description: Schema.Attribute.Text;
+    isArchived: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    length: Schema.Attribute.String;
+    registered: Schema.Attribute.String;
+    speakers: Schema.Attribute.Component<'elements.speaker', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksWebinarHero extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_webinar_heroes';
+  info: {
+    displayName: 'Webinar Hero';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -276,6 +327,16 @@ export interface ElementsLogo extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsSpeaker extends Struct.ComponentSchema {
+  collectionName: 'components_elements_speakers';
+  info: {
+    displayName: 'Speaker';
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutCta extends Struct.ComponentSchema {
   collectionName: 'components_layout_ctas';
   info: {
@@ -325,6 +386,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'blocks.about-us': BlocksAboutUs;
+      'blocks.archived-webinars': BlocksArchivedWebinars;
       'blocks.blog': BlocksBlog;
       'blocks.blog-hero': BlocksBlogHero;
       'blocks.course': BlocksCourse;
@@ -337,7 +399,10 @@ declare module '@strapi/strapi' {
       'blocks.our-story': BlocksOurStory;
       'blocks.our-values': BlocksOurValues;
       'blocks.service-section': BlocksServiceSection;
+      'blocks.upcoming-webinars': BlocksUpcomingWebinars;
       'blocks.webinar': BlocksWebinar;
+      'blocks.webinar-card': BlocksWebinarCard;
+      'blocks.webinar-hero': BlocksWebinarHero;
       'blocks.why-choose': BlocksWhyChoose;
       'elements.cards': ElementsCards;
       'elements.categories': ElementsCategories;
@@ -345,6 +410,7 @@ declare module '@strapi/strapi' {
       'elements.list': ElementsList;
       'elements.live-recording-card': ElementsLiveRecordingCard;
       'elements.logo': ElementsLogo;
+      'elements.speaker': ElementsSpeaker;
       'layout.cta': LayoutCta;
       'layout.footer': LayoutFooter;
       'layout.header': LayoutHeader;

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blocks_archived_webinars",
+  "info": {
+    "displayName": "Archived Webinars"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

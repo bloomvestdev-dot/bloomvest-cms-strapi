@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_blocks_webinar_cards",
+  "info": {
+    "displayName": "Webinar Card"
+  },
+  "options": {},
+  "attributes": {
+    "isArchived": {
+      "type": "boolean",
+      "default": false
+    },
+    "badge": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "length": {
+      "type": "string"
+    },
+    "registered": {
+      "type": "string"
+    },
+    "speakers": {
+      "type": "component",
+      "component": "elements.speaker",
+      "repeatable": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "layout.cta",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

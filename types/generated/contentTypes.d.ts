@@ -520,6 +520,9 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'blocks.featured-block',
         'blocks.blog-hero',
         'blocks.latest-article',
+        'blocks.webinar-hero',
+        'blocks.upcoming-webinars',
+        'blocks.archived-webinars',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -534,6 +537,36 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiWebinarWebinar extends Struct.CollectionTypeSchema {
+  collectionName: 'webinars';
+  info: {
+    displayName: 'Webinar';
+    pluralName: 'webinars';
+    singularName: 'webinar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::webinar.webinar'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    webinar: Schema.Attribute.Component<'blocks.webinar-card', false>;
   };
 }
 
@@ -1051,6 +1084,7 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::page.page': ApiPagePage;
+      'api::webinar.webinar': ApiWebinarWebinar;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

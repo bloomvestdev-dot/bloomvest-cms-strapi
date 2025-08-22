@@ -31,7 +31,10 @@
         "blocks.latest-course",
         "blocks.featured-block",
         "blocks.blog-hero",
-        "blocks.latest-article"
+        "blocks.latest-article",
+        "blocks.webinar-hero",
+        "blocks.upcoming-webinars",
+        "blocks.archived-webinars"
       ]
     }
   }

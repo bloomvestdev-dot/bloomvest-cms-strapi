@@ -35,7 +35,8 @@
         "blocks.webinar-hero",
         "blocks.upcoming-webinars",
         "blocks.archived-webinars",
-        "blocks.contact-hero"
+        "blocks.contact-hero",
+        "blocks.service-hero"
       ]
     }
   }

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_service_heroes",
+  "info": {
+    "displayName": "Service Hero"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "card": {
+      "type": "component",
+      "component": "elements.cards",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

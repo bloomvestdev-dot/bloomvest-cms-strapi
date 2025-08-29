@@ -557,6 +557,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'blocks.upcoming-webinars',
         'blocks.archived-webinars',
         'blocks.contact-hero',
+        'blocks.service-hero',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

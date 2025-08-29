@@ -216,6 +216,18 @@ export interface BlocksOurValues extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksServiceHero extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_service_heroes';
+  info: {
+    displayName: 'Service Hero';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'elements.cards', true>;
+    description: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksServiceSection extends Struct.ComponentSchema {
   collectionName: 'components_blocks_service_sections';
   info: {
@@ -439,6 +451,7 @@ declare module '@strapi/strapi' {
       'blocks.mission-vision': BlocksMissionVision;
       'blocks.our-story': BlocksOurStory;
       'blocks.our-values': BlocksOurValues;
+      'blocks.service-hero': BlocksServiceHero;
       'blocks.service-section': BlocksServiceSection;
       'blocks.upcoming-webinars': BlocksUpcomingWebinars;
       'blocks.webinar': BlocksWebinar;

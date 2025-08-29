@@ -262,6 +262,7 @@ export interface BlocksTestimonialCard extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    name: Schema.Attribute.String;
     profession: Schema.Attribute.String;
   };
 }

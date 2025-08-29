@@ -22,7 +22,8 @@
         "blocks.our-story",
         "blocks.webinar",
         "layout.footer",
-        "blocks.expert-article"
+        "blocks.expert-article",
+        "blocks.testimonials"
       ]
     }
   }

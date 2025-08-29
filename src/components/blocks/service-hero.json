@@ -13,7 +13,7 @@
     },
     "card": {
       "type": "component",
-      "component": "elements.cards",
+      "component": "blocks.service-card",
       "repeatable": true
     }
   },

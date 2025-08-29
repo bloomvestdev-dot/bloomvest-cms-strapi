@@ -254,6 +254,31 @@ export interface BlocksServiceSection extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksTestimonialCard extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_testimonial_cards';
+  info: {
+    displayName: 'Testimonial Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    profession: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksTestimonials extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_testimonials';
+  info: {
+    displayName: 'Testimonials';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'blocks.testimonial-card', true>;
+    cta: Schema.Attribute.Component<'layout.cta', false>;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksUpcomingWebinars extends Struct.ComponentSchema {
   collectionName: 'components_blocks_upcoming_webinars';
   info: {
@@ -467,6 +492,8 @@ declare module '@strapi/strapi' {
       'blocks.service-card': BlocksServiceCard;
       'blocks.service-hero': BlocksServiceHero;
       'blocks.service-section': BlocksServiceSection;
+      'blocks.testimonial-card': BlocksTestimonialCard;
+      'blocks.testimonials': BlocksTestimonials;
       'blocks.upcoming-webinars': BlocksUpcomingWebinars;
       'blocks.webinar': BlocksWebinar;
       'blocks.webinar-card': BlocksWebinarCard;

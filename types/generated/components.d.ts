@@ -60,6 +60,7 @@ export interface BlocksContactHero extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    register: Schema.Attribute.Component<'blocks.why-register', false>;
     subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };

@@ -13,6 +13,11 @@
     },
     "subtitle": {
       "type": "text"
+    },
+    "register": {
+      "type": "component",
+      "component": "blocks.why-register",
+      "repeatable": false
     }
   },
   "config": {}

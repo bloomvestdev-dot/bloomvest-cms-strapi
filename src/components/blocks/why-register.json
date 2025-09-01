@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blocks_why_registers",
+  "info": {
+    "displayName": "Why register"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "point": {
+      "type": "component",
+      "component": "elements.list",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

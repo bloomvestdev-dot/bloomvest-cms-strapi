@@ -60,6 +60,7 @@ export interface BlocksContactHero extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
 }
@@ -345,6 +346,17 @@ export interface BlocksWhyChoose extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksWhyRegister extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_why_registers';
+  info: {
+    displayName: 'Why register';
+  };
+  attributes: {
+    point: Schema.Attribute.Component<'elements.list', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsCards extends Struct.ComponentSchema {
   collectionName: 'components_elements_cards';
   info: {
@@ -500,6 +512,7 @@ declare module '@strapi/strapi' {
       'blocks.webinar-card': BlocksWebinarCard;
       'blocks.webinar-hero': BlocksWebinarHero;
       'blocks.why-choose': BlocksWhyChoose;
+      'blocks.why-register': BlocksWhyRegister;
       'elements.cards': ElementsCards;
       'elements.categories': ElementsCategories;
       'elements.link': ElementsLink;

@@ -237,6 +237,7 @@ export interface BlocksServiceHero extends Struct.ComponentSchema {
     displayName: 'Service Hero';
   };
   attributes: {
+    bg: Schema.Attribute.Media<'images'>;
     card: Schema.Attribute.Component<'blocks.service-card', true>;
     description: Schema.Attribute.String;
     title: Schema.Attribute.String;

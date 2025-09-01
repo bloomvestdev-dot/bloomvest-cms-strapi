@@ -15,6 +15,13 @@
       "type": "component",
       "component": "blocks.service-card",
       "repeatable": true
+    },
+    "bg": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   },
   "config": {}

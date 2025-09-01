@@ -59,6 +59,7 @@ export interface BlocksContactHero extends Struct.ComponentSchema {
     displayName: 'Contact Hero';
   };
   attributes: {
+    bg: Schema.Attribute.Media<'images', true>;
     description: Schema.Attribute.Text;
     register: Schema.Attribute.Component<'blocks.why-register', false>;
     subtitle: Schema.Attribute.Text;

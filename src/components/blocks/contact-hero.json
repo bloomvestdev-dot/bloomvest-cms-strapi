@@ -18,6 +18,13 @@
       "type": "component",
       "component": "blocks.why-register",
       "repeatable": false
+    },
+    "bg": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   },
   "config": {}

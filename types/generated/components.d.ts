@@ -219,6 +219,14 @@ export interface BlocksOurValues extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksPolicy extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_policies';
+  info: {
+    displayName: 'policy';
+  };
+  attributes: {};
+}
+
 export interface BlocksServiceCard extends Struct.ComponentSchema {
   collectionName: 'components_blocks_service_cards';
   info: {
@@ -255,6 +263,16 @@ export interface BlocksServiceSection extends Struct.ComponentSchema {
     cards: Schema.Attribute.Component<'elements.cards', true>;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksTerms extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_terms';
+  info: {
+    displayName: 'terms';
+  };
+  attributes: {
+    text: Schema.Attribute.RichText;
   };
 }
 
@@ -468,9 +486,11 @@ export interface LayoutFooter extends Struct.ComponentSchema {
     instagram: Schema.Attribute.Text;
     linkedin: Schema.Attribute.Text;
     logo: Schema.Attribute.Component<'elements.logo', false>;
+    policy: Schema.Attribute.RichText;
     quickLinks: Schema.Attribute.Component<'elements.link', true>;
     rightsText: Schema.Attribute.Text;
     services: Schema.Attribute.Component<'elements.link', true>;
+    terms: Schema.Attribute.RichText;
     twitter: Schema.Attribute.Text;
   };
 }
@@ -505,9 +525,11 @@ declare module '@strapi/strapi' {
       'blocks.mission-vision': BlocksMissionVision;
       'blocks.our-story': BlocksOurStory;
       'blocks.our-values': BlocksOurValues;
+      'blocks.policy': BlocksPolicy;
       'blocks.service-card': BlocksServiceCard;
       'blocks.service-hero': BlocksServiceHero;
       'blocks.service-section': BlocksServiceSection;
+      'blocks.terms': BlocksTerms;
       'blocks.testimonial-card': BlocksTestimonialCard;
       'blocks.testimonials': BlocksTestimonials;
       'blocks.upcoming-webinars': BlocksUpcomingWebinars;

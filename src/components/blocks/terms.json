@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blocks_terms",
+  "info": {
+    "displayName": "terms"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

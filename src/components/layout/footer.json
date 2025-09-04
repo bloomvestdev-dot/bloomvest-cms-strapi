@@ -57,6 +57,12 @@
         "videos",
         "audios"
       ]
+    },
+    "terms": {
+      "type": "richtext"
+    },
+    "policy": {
+      "type": "richtext"
     }
   },
   "config": {}
